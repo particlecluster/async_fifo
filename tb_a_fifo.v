@@ -84,7 +84,7 @@ module tb_a_fifo;
             @(posedge r_clk) begin
                 if (!r_empty) begin
                     r_inc            <= 1;
-                    captured_data[j] <= r_data; // directly store into captured_data
+                    captured_data[j] <= r_data; 
                     $display("Read [%0d] = 0x%0h", j, r_data);
                 end else begin
                     r_inc <= 0;
